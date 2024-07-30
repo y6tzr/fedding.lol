@@ -9,9 +9,79 @@
     <style>
         body {
             background: black;
+            color: white;
+            text-align: center;
         }
-        body > :not(#overlay) {
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        #overlay div {
+            font-size: 3em;
+            text-shadow: 0px 0px 20px white;
+        }
+        #overlay a {
+            color: white;
+            text-decoration: none;
+        }
+        #overlay a:hover {
+            text-shadow: 0px 0px 40px white;
+        }
+        .card {
+            background: var(--bs-body-color);
+            color: var(--bs-body-bg);
+            margin: 20px auto;
+            max-width: 300px;
+            text-align: center;
             display: none;
+            padding: 20px;
+            position: relative;
+            border-radius: 15px;
+            animation: rainbow-border 5s infinite;
+        }
+        .card img {
+            margin-top: 20px;
+            border-radius: 50%;
+        }
+        .card a {
+            color: white;
+            text-decoration: none;
+        }
+        .card a:hover {
+            text-shadow: 0px 0px 10px white;
+        }
+        @keyframes rainbow-border {
+            0% {
+                box-shadow: 0 0 10px 5px red;
+            }
+            14% {
+                box-shadow: 0 0 10px 5px orange;
+            }
+            28% {
+                box-shadow: 0 0 10px 5px yellow;
+            }
+            42% {
+                box-shadow: 0 0 10px 5px green;
+            }
+            57% {
+                box-shadow: 0 0 10px 5px blue;
+            }
+            71% {
+                box-shadow: 0 0 10px 5px indigo;
+            }
+            85% {
+                box-shadow: 0 0 10px 5px violet;
+            }
+            100% {
+                box-shadow: 0 0 10px 5px red;
+            }
         }
     </style>
 </head>
@@ -24,33 +94,20 @@
         <div><a href="#">Click here to enter</a></div>
     </div>
 
-    <h1 class="text-center rainbow-text" style="color: var(--bs-body-bg); text-shadow: 0px 0px 40px">
-        HALL OF AUTISM
-    </h1>
-
-    <h1 class="text-center rainbow-text" style="color: var(--bs-body-bg); text-shadow: 0px 0px 6px">
-        RETARDS
-    </h1>
-    <div class="container">
-        <div class="row" style="height: auto">
-            <div class="col">
-                <div class="card" style="background: var(--bs-body-color)">
-                    <div class="d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 0">
-                        <img class="d-xl-flex" width="150" height="150" src="https://files.catbox.moe/tnt3oa.PNG" style="margin-top: 53px" loading="auto">
-                    </div>
-                    <div class="card-body" style="height: 180.8px; color: var(--bs-body-bg)">
-                        <h4 class="text-center card-title rainbow-text" style="margin-top: 0">
-                            Sebastian Richardson
-                        </h4>
-                        <p class="scrollable-box" style="font-size: 13px; margin-bottom: 0px">
-                            Pedo
-                        </p>
-                        <a class="d-xl-flex justify-content-xl-center" href="https://doxbin.com/upload/0x01SebastianPedo">Dox</a>
-                    </div>
-                </div>
-            </div>
+    <div class="card" id="profile-card">
+        <img src="https://files.catbox.moe/tnt3oa.PNG" width="150" height="150">
+        <div class="card-body">
+            <h4 class="card-title">Sebastian Richardson</h4>
+            <a href="https://doxbin.com/upload/SebastianRichardRichardson">Info</a>
         </div>
     </div>
+
+    <script>
+        function startSite() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('profile-card').style.display = 'block';
+        }
+    </script>
     <script src="file/bootstrap.min.js"></script>
     <script src="file/hoa.js"></script>
 </body>
