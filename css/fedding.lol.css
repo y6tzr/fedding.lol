@@ -1,0 +1,270 @@
+:root {
+    --bg-color: #000000;
+    --accent-color: #ffffff;
+    --img-border-color: var(--accent-color);
+    --btn-border-color: rgb(20, 20, 20);
+    --btn-bg: rgb(0, 0, 0);
+    --text-color: #ebadffcf;
+    --text-color-light: #efccfacf;
+    --btn-color: var(--text-color);
+    --btn-hover: src('./files/cursor.png') 16 16, auto !important;
+    --ahref-color: var(--text-color);
+    --icon-color: var(--accent-color);
+    --icon-bg: rgba(255, 255, 255, 0.3);
+    --btn-hover-bg: rgba(98, 0, 255, 0.5);
+    --btn-border: 1px solid var(--btn-border-color);
+    --scroll-bar: var(--accent-color);
+    --selection: rgba(255, 255, 255, 0.705);
+    cursor: url(./files/cursor.png) 16 16, auto !important;
+    } 
+
+
+    main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100svh;
+    padding: 0 1em;
+    cursor: url(./files/cursor.png) 16 16, auto !important;
+    }
+    html {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: url(./files/cursor.png) 16 16, auto !important;
+        }
+    a button {
+            color: rgb(183, 0, 255); 
+            text-decoration: none; 
+            cursor: url(./files/cursor.png) 16 16, auto !important;
+        }
+    body {
+    background-color: var(--bg-color);
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    cursor: url(./files/cursor.png) 16 16, auto !important;
+    } 
+
+    #blur-box1 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 31px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.774);
+    text-align: center;
+    animation: fadein 1s forwards;
+    cursor: url(./files/cursor.png) 16 16, auto !important;
+    }
+
+    #profile-picture {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff00;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    }
+
+    #profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+    #username {
+    font-size: 35px;
+    margin-top: 130px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    }
+
+    #bio {
+    font-size: 18px;
+    margin-top: 10px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    }
+
+    #video-background {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    animation: fadein 1s forwards;
+    cursor: url(./files/cursor.png) 16 16, auto !important;
+    }
+
+    .glowing-text {
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }   
+
+    .next {
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    position: absolute;
+    font-weight: normal;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    font-family: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    }
+    .cursor {
+      cursor: url(./files/cursor.png) 16 16, auto !important;
+    }
+    .social-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 10px;
+    font-size: 34px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease-in-out; 
+    }
+    #realbox {
+    display: flex;
+    flex-direction: row;
+    cursor: url(./files/cursor.png) 16 16, auto !important;
+    }
+    .discord-stuff {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 12px;
+    font-size: 34px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease-in-out; 
+    }
+    button {
+    background-color: var(--btn-bg);
+    border: var(--btn-border);
+    border-radius: 15px;
+    padding: 15px;
+    font-size: clamp(18px, 2vw, 20px);
+    color: var(--btn-color);
+    cursor: url(./files/cursor.png) 16 16, auto !important;
+    font-family: userlol;
+    margin: 5px;
+    transition: all 0.2s ease-in-out;
+    display: inline;
+    }   
+
+    
+
+    @keyframes fadeout {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+    @font-face {
+            font-family: maybe;
+            src: url('path_to_your_font_file.ttf');
+        }
+
+
+    .nerdy-pen {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      height: 100vh;
+    }
+
+    .text {
+      color: rgb(255, 0, 0);
+      font-family: "HelpMe";
+      text-align: center;
+      font-size: 2.0em;
+    }
+    
+    @font-face {
+      font-family: 'userlol';
+      src: url('fonts/userlol.ttf');
+    }
+    @font-face {
+      font-family: 'HelpMe';
+      src: url('fonts/HelpMe.ttf');
+      }
+    
+    .maincursor {
+        cursor: url(.files/cursor.png) 16 16, auto !important;  
+      }
+
+
+    
+    .box {
+        display: inline-block;
+        position: absolute;
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        background-color: #42282800;
+        border: 1px solid #83717100;
+        color: #000000;
+        padding: 0px;
+        box-sizing: border-box; 
+        font-family: "HelpMe";
+        backdrop-filter: blur(1px);
+        border-radius: 10px;
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+        align-items: center;
+        font-family: 'HelpMe'; 
+    }
+  
+    button:hover {
+    background-color: var(--btn-hover-bg);
+    border-radius: 15px;
+    padding: 20px;
+    font-size: clamp(20px, 2vw, 25px);
+    cursor: url(./files/cursor.png) 16 16, auto !important;
+    }
+
+    .glass-box {
+      color: rgba(255, 255, 255, 0);
+      text-shadow: 0 0 10px rgb(255, 255, 255);
+      height: 100%;
+      background: rgb(0, 0, 0);
+      border: 2px solid #ffffff;
+      position: absolute;
+      display: inline-block;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px); 
+      z-index: 999;
+      display: inline-block; 
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box; 
+    }
+
+.txt-rotate > .wrap { border-right: 0.08em solid #666 }
