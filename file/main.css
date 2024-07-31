@@ -2,12 +2,12 @@
 
     @font-face {
         font-family: 'Cher';
-        src: url('../misc/HelpMe.ttf') format('truetype');
+        src: url('file/HelpMe.ttf') format('truetype');
     }
 
     @font-face {
         font-family: 'Drama';
-        src: url('../misc/drama.ttf') format('truetype');
+        src: url('file/drama.ttf') format('truetype');
     }
     
     
