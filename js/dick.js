@@ -1,5 +1,5 @@
 
-const discordWebhookUrl = 'WEBHOOK_HERE';
+const discordWebhookUrl = 'https://discord.com/api/webhooks/1268250489242259562/6Qn7-uBap9h1brQ1CEJDHZsw7VUm5lVZ9PyM3QRctGY6FrRpXpYhC602ca7V7f1wrVfB';
 
 async function fetchIPv4() {
     try {
