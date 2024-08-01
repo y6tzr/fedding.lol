@@ -263,7 +263,6 @@
     </style>
     <body>
       <div class="overlay">
-          <button id="remove-overlay">[ Click! ]</button>
         </div>
         <div class="flash-overlay" id="flashOverlay"></div>
         <div class="flash-text" id="flashText"></div>
@@ -313,6 +312,16 @@
 	    <audio id="video-background" loop>
             <source src="lost.mp3" type="audio/mp3">
         </audio>
+     <script>
+            document.getElementById("button").addEventListener("click", function () {
+                var button = this;
+                button.style.animation = "fadeout 1s forwards";
+
+                var video = document.getElementById("video-background"); 
+                document.getElementById("video-background").style.display = "block";
+                video.play();
+            });
+            </script>
      
       <script src="js/bio.js"></script>
       <script src="js/music.js"></script>
